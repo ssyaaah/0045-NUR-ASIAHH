@@ -1,0 +1,78 @@
+body {
+    font-family: "Playfair Display", sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    overflow-wrap: break-word; /* Mengatur pemecahan kata jika teks terlalu panjang */
+    word-wrap: break-word; /* Alternatif untuk dukungan browser yang lebih lama */
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 100%;
+}
+
+header {
+    background: blue;
+    height: 120px;
+}
+
+nav {
+    background: palevioletred;
+    height: 80px;
+}
+
+footer {
+    background: brown;
+    height: 80px;
+}
+
+.main {
+    background: red;
+    height: 300px;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.aside1 {
+    background: yellow;
+}
+
+/* Tampilan responsive */
+@media all and (min-width: 800px){
+
+    .main{
+        flex: 2;
+    }
+    .aside1{
+        order: 2;
+    }
+    .main {
+        order: 1;
+    }
+    .footer {
+        order: 4;
+    }
+}
+@media all and (min-width: 600px){
+    .aside1 {
+        flex: 1;
+    }
+}
